@@ -1,11 +1,19 @@
-let userData = [
-    {id:1 , username:'ali' , password:'13123jsdf'},
-    {id:2 , username:'amir' , password:'sdfasdf'},
-    {id:3 , username:'hasan' , password:'13gggg'},
-    {id:4 , username:'mmd' , password:'23323'},
-    ]
+let usersData = [
+    {id:1, username:"amir", pass: '232323'},
+    {id:2, username:"hassan", pass: 'ar1212'},
+    {id:3, username:"ali", pass: 'ali2525'},
+    {id:4, username:"mmd", pass: 'assseede'},
+]
+let promtUserName = prompt('pleas enter your username:')
 
-
-userData.forEach(function(user){
-    console.log('username'+':'+user.username  ,'password'+':'+user.password)
+let getUserName = usersData.find(function(user) {
+    return user.username === promtUserName
 })
+
+if ( getUserName === undefined){
+    alert('شما در سایت ثبت نام نکردید')
+}else {
+    alert('your password is :'+ getUserName.pass)
+}
+
+
